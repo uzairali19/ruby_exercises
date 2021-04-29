@@ -34,10 +34,9 @@ def find_word_lengths(word_list)
   # return a hash with each word as the key and its length as the value
   # hint: look at the documentation and review the reduce examples in basic enumerable lesson
 
-  votes = ["Bob's Dirty Burger Shack", "St. Mark's Bistro", "Bob's Dirty Burger Shack"]
-
-votes.reduce(Hash.new(0)) do |result, vote|
-  result[vote] += 1
-  result
-end
+  word_list.reduce(Hash.new(0)) do |result, vote|
+    result[vote] += word_list.length
+    result
+  end
+  
 end
