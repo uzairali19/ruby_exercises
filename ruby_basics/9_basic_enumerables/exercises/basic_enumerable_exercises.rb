@@ -35,8 +35,7 @@ def find_word_lengths(word_list)
   # hint: look at the documentation and review the reduce examples in basic enumerable lesson
 
   word_list.reduce(Hash.new(0)) do |result, vote|
-    result[vote] += word_list.length
+    result[vote] += vote.length
     result
   end
-  
 end
